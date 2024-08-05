@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
 
 import dev.tedros.visionplus.run.Location;
 import dev.tedros.visionplus.run.Run;
-import dev.tedros.visionplus.run.RunRepository;
+import dev.tedros.visionplus.run.JdbcClientRunRepository;
 
 @SpringBootApplication
 public class Application {
@@ -23,14 +23,15 @@ public class Application {
 		log.info("Application started successfully");
 	}
 
-	@Bean
-	CommandLineRunner runner(RunRepository runRepository) {
-		return args -> {
-			Run run = new Run(1, "First run", LocalDateTime.now(), LocalDateTime.now().plus(1, ChronoUnit.HOURS), 5,
-					Location.INDOOR);
-			runRepository.create(run);
-			log.info("Run: " + run);
-		};
-	}
+	// @Bean
+	// CommandLineRunner runner(RunRepository runRepository) {
+	// return args -> {
+	// Run run = new Run(1, "First run", LocalDateTime.now(),
+	// LocalDateTime.now().plus(1, ChronoUnit.HOURS), 5,
+	// Location.INDOOR);
+	// runRepository.create(run);
+	// log.info("Run: " + run);
+	// };
+	// }
 
 }
