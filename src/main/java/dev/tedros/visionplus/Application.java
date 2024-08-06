@@ -1,7 +1,5 @@
 package dev.tedros.visionplus;
 
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -14,12 +12,8 @@ import org.springframework.web.client.RestClient;
 import org.springframework.web.client.support.RestClientAdapter;
 import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 
-import dev.tedros.visionplus.run.Location;
-import dev.tedros.visionplus.run.Run;
 import dev.tedros.visionplus.user.User;
 import dev.tedros.visionplus.user.UserHttpClient;
-import dev.tedros.visionplus.user.UserRestClient;
-import dev.tedros.visionplus.run.JdbcClientRunRepository;
 
 @SpringBootApplication
 public class Application {

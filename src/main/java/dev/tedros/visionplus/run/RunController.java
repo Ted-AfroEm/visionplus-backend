@@ -15,7 +15,6 @@ import jakarta.validation.Valid;
 
 import java.util.List;
 import java.util.Optional;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping("/api/runs")
